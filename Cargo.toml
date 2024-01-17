@@ -1,6 +1,6 @@
 [package]
-name = "rs_osrm"
-version = "2.0.1"
+name = "rs_osrm_serde"
+version = "0.1.0"
 license = "MIT"
 authors = ["Ronny Karlsson <mafiapro@live.se>"]
 edition = "2018"
@@ -12,7 +12,7 @@ readme = "README.md"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [lib]
-name = "rs_osrm"
+name = "rs_osrm_serde"
 path = "src/lib.rs"
 
 [dependencies]
