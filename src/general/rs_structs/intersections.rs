@@ -1,11 +1,12 @@
 use std::slice;
 
+use serde::{Deserialize, Serialize};
 use crate::{Boolean, general::{Coordinate, c_string_to_string, c_structs::c_intersections::COsrmIntersections}};
 
 use super::lanes::Lanes;
 
 
-#[derive(Debug)]
+#[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct Intersections {
     pub location: Coordinate,
     pub bearings: Vec<i32>,

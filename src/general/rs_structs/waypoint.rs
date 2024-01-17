@@ -1,7 +1,8 @@
-use std::{ptr::null};
-
+use std::ptr::null;
+use serde::{Deserialize, Serialize};
 use crate::general::{c_string_to_string, c_structs::c_waypoint::CWaypoint};
 
+#[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct Waypoint {
     pub hint: Option<String>,
     pub distance: f64,

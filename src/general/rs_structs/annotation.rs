@@ -1,10 +1,10 @@
 use std::slice;
 
 use crate::general::c_structs::c_annotation::COsrmAnnotation;
-
+use serde::{Deserialize, Serialize};
 use super::meta_data::MetaData;
 
-#[derive(Debug)]
+#[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct Annotation {
     pub duration: Vec<f64>,
     pub distance: Vec<f64>,

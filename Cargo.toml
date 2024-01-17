@@ -4,8 +4,8 @@ version = "2.0.1"
 license = "MIT"
 authors = ["Ronny Karlsson <mafiapro@live.se>"]
 edition = "2018"
-description = "rust wrapper for osrm"
-repository = "https://github.com/TehGoat/rs_osrm"
+description = "rust wrapper for osrm, folk from TehGoat/rs_osrm"
+repository = "https://github.com/lichbt-rk/rs_osrm_serde"
 keywords = ["osrm"]
 readme = "README.md"
 
@@ -16,6 +16,7 @@ name = "rs_osrm"
 path = "src/lib.rs"
 
 [dependencies]
+serde = { version = "1.0.195", features = ["derive"] }
 
 [build-dependencies]
 cmake = "0.1"

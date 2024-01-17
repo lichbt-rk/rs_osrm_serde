@@ -1,6 +1,6 @@
 use super::route_leg::RouteLeg;
-
-
+use serde::{Deserialize, Serialize};
+#[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct Route {
     pub duration: f64,
     pub distance: f64,

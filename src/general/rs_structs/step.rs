@@ -1,11 +1,12 @@
 use std::{os::raw::c_double, slice};
 
+use serde::{Deserialize, Serialize};
 use crate::general::{c_string_to_option_string, c_structs::c_step::COsrmStep};
 
 use super::{intersections::Intersections, maneuver::Maneuver};
 
 
-#[derive(Debug)]
+#[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct Step {
     pub distance: f64,
     pub duration: f64,

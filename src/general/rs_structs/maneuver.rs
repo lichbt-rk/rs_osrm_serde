@@ -1,6 +1,6 @@
 use crate::general::{Coordinate, c_string_to_option_string, c_string_to_string, c_structs::c_maneuver::COsrmManeuver};
-
-#[derive(Debug)]
+use serde::{Deserialize, Serialize};
+#[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct Maneuver {
     pub bearing_before: i32,
     pub bearing_after: i32,

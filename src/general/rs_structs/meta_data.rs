@@ -1,9 +1,10 @@
 use std::slice;
 
+use serde::{Deserialize, Serialize};
 use crate::general::{c_string_to_string, c_structs::c_meta_data::COsrmMetaData};
 
 
-#[derive(Debug)]
+#[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct MetaData {
     datasource_names: Vec<String>,
 }

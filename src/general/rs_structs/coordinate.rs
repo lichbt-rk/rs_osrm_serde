@@ -1,6 +1,7 @@
 use crate::general::c_structs::c_coordinate::COsrmCoordinate;
+use serde::{Deserialize, Serialize};
 
-#[derive(Debug, Clone)]
+#[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct Coordinate {
     pub latitude: f64,
     pub longitude: f64,

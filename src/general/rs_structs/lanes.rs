@@ -1,8 +1,9 @@
 use std::slice;
 
+use serde::{Deserialize, Serialize};
 use crate::{Boolean, general::{c_string_to_string, c_structs::c_lanes::COsrmLanes}};
 
-#[derive(Debug)]
+#[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct Lanes {
     pub indications: Vec<String>,
     pub valid: bool,

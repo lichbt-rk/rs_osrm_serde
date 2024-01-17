@@ -3,7 +3,7 @@ use std::{
     os::raw::{c_char, c_int},
     slice,
 };
-
+use serde::{Deserialize, Serialize};
 use crate::general::{
     c_structs::{c_route::COsrmRoute, c_waypoint::CWaypoint},
     rs_structs::{route::Route, waypoint::Waypoint},
@@ -19,6 +19,7 @@ pub(crate) struct CRouteResult {
     number_of_routes: c_int,
 }
 
+#[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct RouteResult {
     pub code: Option<String>,
     pub message: Option<String>,

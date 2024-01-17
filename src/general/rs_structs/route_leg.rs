@@ -1,10 +1,11 @@
 use std::slice;
 
 use crate::general::{c_string_to_option_string, c_structs::c_route_leg::COsrmRouteLeg};
-
+use serde::{Deserialize, Serialize};
 use super::{annotation::Annotation, step::Step};
 
-#[derive(Debug)]
+
+#[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct RouteLeg {
     pub annotation: Option<Annotation>,
     pub duration: f64,

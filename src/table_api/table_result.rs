@@ -1,5 +1,5 @@
 use std::{ffi::CStr, os::raw::{c_char, c_int}, slice};
-
+use serde::{Deserialize, Serialize};
 use crate::general::{c_structs::c_waypoint::CWaypoint, rs_structs::waypoint::Waypoint};
 
 #[repr(C)]
@@ -14,6 +14,7 @@ pub(crate) struct CTableResult {
     number_of_destinations: c_int,
 }
 
+#[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct TableResult {
     pub code: Option<String>,
     pub message: Option<String>,
